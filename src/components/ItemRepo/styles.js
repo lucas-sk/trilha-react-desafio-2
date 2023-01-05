@@ -14,7 +14,7 @@ export const ItemContainer = styled.div`
         margin-bottom:20px;
     }
 
-    a.remover {
+    p.remover {
         color: #FF0000;
         margin-top:20px;
     }

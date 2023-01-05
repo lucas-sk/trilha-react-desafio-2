@@ -1,8 +1,8 @@
 
 import { useState } from 'react';
-import gitLogo from '../assets/github.png'
-import Input from '../components/Input';
+import gitLogo from '../assets/github.png';
 import Button from '../components/Button';
+import Input from '../components/Input';
 import ItemRepo from '../components/ItemRepo';
 import { api } from '../services/api';
 
@@ -34,9 +34,9 @@ function App() {
   }
 
   const handleRemoveRepo = (id) => {
-    console.log('Removendo registro', id);
-
-    // utilizar filter.
+    const newRepos = []
+    repos.filter(repo => repo.id !== id ? newRepos.push(repo) : null)
+    setRepos(newRepos)
   }
 
 
